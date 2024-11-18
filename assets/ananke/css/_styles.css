@@ -1,19 +1,124 @@
-gohugo-theme-ananke/assets/ananke/css
-/_styles.css
-Latest commit
-jack-handley
-jack-handley
-433 fix tags layout (theNewDynamic#472)
-6045d78
- · 
-2 years ago
-History
-File metadata and controls
+/* Normalize spacing globally */
+* {
+  margin: 0 !important;
+  padding: 5px !important;
+  box-sizing: border-box;
+  background-color: none !important;
+}
+body {
+  background: linear-gradient(135deg, #ffffff, #e9f0dd);
+  color: #2C3E50; /* Dark text for readability */
+  font-family: 'Merriweather', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  align-items: center;
+  background-color: transparent !important;
+}
+.container {
+  max-width: 800px; /* Adjust the width as needed */
+  margin: 0 auto; /* Centers the container horizontally */
+  padding: 20px; /* Adds padding inside the container */
+  text-align: left; /* Ensures text starts from the left */
+  box-shadow: none; /* Removes any shadow effects */
+  border: none; /* Remove any borders */
+  margin-top: 0; /* Reduce space between the container and header */
+  padding-top: 0; /* Reduce padding inside the container */
+  background: none !important;
+}
+/* Ensure all sections inherit the gradient */
+section, .home-section, .container, div {
+  background: none !important; /* Remove any existing background color */
+  box-shadow: none !important; /* Remove shadow if applied */
+  border: none !important; /* Remove any borders */
+}
+header h1 {
+  color: #6B8E23 !important; /* Set your desired color */
+}
+/* Optional: Set specific sections if they inherit other colors */
+/* Header */
+header h1 h2 h3 {
+  color: #6B8E23;
+  background: none;
+  padding: 20px;
+  text-align: left;
+  font-family: 'Playfair Display', serif;
+  border: none; /* Remove any border */
+  box-shadow: none; /* Remove shadow effects */
+}
+.section {
+  text-align: left; /* Center-align text for this section only */
+}
+footer {
+background: none !important;
+}
+/* Specific rule for home section */
+.home-section {
+  margin: 0;
+  padding: 20px;
+  text-align: left;
+  background-color: none !important;
+}
+h1 {
+  margin: 0; /* Remove any default margins */
+  padding: 10px 0; /* Add a small amount of padding if needed */
+  font-size: 2.5rem; /* Adjust font size if it's too large */
+  line-height: 1.2; /* Control the line spacing */
+}
+/* Section Headers */
+h1, h2, h3 {
+  color: #222424; /*Match header text to black of the boxes */
+  font-family: 'Cinzel Decorative', serif;
+  margin: 10px 0; /* Adds spacing between lines */
+  line-height: 1.5; /* Adjusts line spacing for readability */
+}
+/* Buttons */
+button, a {
+  background-color: #6B8E23; /* Green for buttons */
+  color: #FFFFFF; /* White text on buttons */
+  border-radius: 8px;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
 
-Code
+button:hover, a:hover {
+  background-color: #4C702A; /* Darker green hover effect */
+  transform: scale(1.05);
+}
 
-Blame
-20 lines (16 loc) · 363 Bytes
+/* For all section or divs */
+section, div {
+  background: none !important; /* Remove all background colors */
+  box-shadow: none !important; /* Remove any shadows */
+}
+/* Put your custom styles here and run `npm start` from the "src" directory on */
+
+#TableOfContents ul li {
+  margin-bottom: 1em;
+}
+
+.lh-copy blockquote {
+  display: block;
+  font-size: .875em;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid #ccc;
+  padding-left: 1rem;
+
+}
+
+.nested-links a{
+  overflow-wrap: break-word;
+}
+img[src="/images/profile.png"] {
+    width: 1500px;
+    height: auto;
+    transform: rotate(-15deg); /* Apply a slight angle */
+    display: block; /* Ensure proper rendering */
+    margin: 20px auto; /* Center the image with some margin */
+}
 /* Put your custom styles here and run `npm start` from the "src" directory on */
 
 #TableOfContents ul li {

@@ -1,23 +1,32 @@
 /* Normalize spacing globally */
 * {
-  margin: 0 !important;
   padding: 5px !important;
   box-sizing: border-box;
   background-color: none !important;
 }
+.ph4-ns {
+ padding: 0
+}
+.blog-name h1 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  color: #6B8E23; /* Adjust as needed */
+  margin: 20px 0;
+}
 body {
   background: linear-gradient(135deg, #ffffff, #e9f0dd);
-  color: #2C3E50; /* Dark text for readability */
+  color: #222424; /* Dark text for readability */
   font-family: 'Merriweather', sans-serif;
   margin: 0;
   padding: 0;
   text-align: left;
   align-items: center;
   background-color: transparent !important;
+  vertical-align: middle;
 }
 .container {
   max-width: 800px; /* Adjust the width as needed */
-  margin: 0 auto; /* Centers the container horizontally */
+  margin: 0 auto;
   padding: 20px; /* Adds padding inside the container */
   text-align: left; /* Ensures text starts from the left */
   box-shadow: none; /* Removes any shadow effects */
@@ -25,6 +34,7 @@ body {
   margin-top: 0; /* Reduce space between the container and header */
   padding-top: 0; /* Reduce padding inside the container */
   background: none !important;
+
 }
 /* Ensure all sections inherit the gradient */
 section, .home-section, .container, div {
@@ -32,56 +42,89 @@ section, .home-section, .container, div {
   box-shadow: none !important; /* Remove shadow if applied */
   border: none !important; /* Remove any borders */
 }
-header h1 {
-  color: #6B8E23 !important; /* Set your desired color */
-}
-/* Optional: Set specific sections if they inherit other colors */
-/* Header */
-header h1 h2 h3 {
-  color: #6B8E23;
-  background: none;
-  padding: 20px;
-  text-align: left;
-  font-family: 'Playfair Display', serif;
-  border: none; /* Remove any border */
-  box-shadow: none; /* Remove shadow effects */
-}
-.section {
-  text-align: left; /* Center-align text for this section only */
-}
-footer {
-background: none !important;
-}
-/* Specific rule for home section */
-.home-section {
-  margin: 0;
-  padding: 20px;
-  text-align: left;
-  background-color: none !important;
+header {
+  text-align: left !important;
 }
 h1 {
+  text-align: center;
   margin: 0; /* Remove any default margins */
   padding: 10px 0; /* Add a small amount of padding if needed */
   font-size: 2.5rem; /* Adjust font size if it's too large */
   line-height: 1.2; /* Control the line spacing */
 }
 /* Section Headers */
-h1, h2, h3 {
+h1, h2, h3{
   color: #222424; /*Match header text to black of the boxes */
   font-family: 'Cinzel Decorative', serif;
   margin: 10px 0; /* Adds spacing between lines */
   line-height: 1.5; /* Adjusts line spacing for readability */
+  text-align: left;
+}
+header h1 { /* this is sarah's blog in home section */
+  color: #6B8E23 !important; /* Set your desired color */
+  text-align: center !important;
+  vertical-align: middle !important;
+  justify-content: center !important;
+}
+.athelas {
+   text-align: left !important;
+ } 
+.recent-posts-header {
+    text-align: center; /* Center-align explicitly */
+    margin: 10px auto; /* Add spacing around the header */
+    font-size: 1.5rem; /* Adjust size for visibility */
+    color: #222424; /* Match text color */
+}
+.section {
+  text-align: center; /* Center-align text for this section only */
+}
+.flex-ns {
+  display: block;
+  max-width: 800px; /* Adjust width as needed */
+
+}
+.flex-ns.flex-wrap.justify-around.mt5 {
+  display: block;
+  margin: 0 auto;
+  max-width: 800px; /* Adjust width as needed */
+  padding: 20px;
+}
+.relative.w-100.mb4 {
+  width: 100%; /* Make each post take the full width */
+  margin: 0 auto; /* Center the post container */
+  text-align: left; /* Center-align the content of each post */
+}
+footer {
+ background: none !important;
+ display: flex; /* Flexbox layout */
+ align-items: center; /* Vertically centers content */
+ justify-content: center; /* Adjust spacing if needed */
+}
+/* Specific rule for home section */
+.home-section {
+  margin: 0;
+  padding: 20px;
+  text-align: center !important;
+  background-color: none !important;
+}
+.pa4-ns {
+  max-width: 800px;
+}
+.w-70-ns {
+  width: 100%;
 }
 /* Buttons */
 button, a {
   background-color: #6B8E23; /* Green for buttons */
-  color: #FFFFFF; /* White text on buttons */
+  color: #FFFFFF !important; /* White text on buttons */
   border-radius: 8px;
   padding: 10px 20px;
   text-decoration: none;
   transition: all 0.3s ease;
 }
-
+.bg-light-gray {
+  background-color: #999999 !important;
+}  
 button:hover, a:hover {
   background-color: #4C702A; /* Darker green hover effect */
   transform: scale(1.05);
@@ -91,9 +134,41 @@ button:hover, a:hover {
 section, div {
   background: none !important; /* Remove all background colors */
   box-shadow: none !important; /* Remove any shadows */
+  justify-content: center !important;
 }
-/* Put your custom styles here and run `npm start` from the "src" directory on */
 
+.center  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.center h1 {
+    text-align: left;
+    margin: 0 auto; /* Center-align heading */
+}
+
+/* Put your custom styles here and run `npm start` from the "src" directory on */
+@media screen and (max-width: 800px) {
+    .center h1 {
+        text-align: center;
+    }
+}
+@media screen and (min-width:60em){
+	width:32%;
+}
+.pb7 {
+  width: 100%; /* Ensures the box takes the full width of its container */
+  max-width: 700px; /* Limits the maximum width for better readability */
+  margin: 0 auto; /* Centers the box horizontally */
+  text-align: left; /* Aligns the text inside the box to the left */
+  padding: 20px; /* Adds padding inside the box */
+  align-items: center;
+  display: flex;
+}
+.w-two-thirds-l {
+  width: 100%;
+}
 #TableOfContents ul li {
   margin-bottom: 1em;
 }
@@ -118,24 +193,4 @@ img[src="/images/profile.png"] {
     transform: rotate(-15deg); /* Apply a slight angle */
     display: block; /* Ensure proper rendering */
     margin: 20px auto; /* Center the image with some margin */
-}
-/* Put your custom styles here and run `npm start` from the "src" directory on */
-
-#TableOfContents ul li {
-  margin-bottom: 1em;
-}
-
-.lh-copy blockquote {
-  display: block;
-  font-size: .875em;
-  margin-left: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  border-left: 4px solid #ccc;
-  padding-left: 1rem;
-
-}
-
-.nested-links a{
-  overflow-wrap: break-word;
 }
